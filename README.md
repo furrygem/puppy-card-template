@@ -1,3 +1,3 @@
 # puppy-card
 
-Simple Web applicaton that acts as a birthday card 🐶🐕🐕‍🦺🐩
+Simple Web application that acts as a birthday card 🐶🐕🐕‍🦺🐩
