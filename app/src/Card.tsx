@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Confetti from 'react-confetti';
 
 
@@ -6,6 +7,8 @@ interface CardProps {
     firstTitle: string,
     subtitle: string,
     text: string[];
+    width: number,
+    height: number,
 }
 
 
@@ -59,7 +62,7 @@ function Footer() {
 function Card(props: CardProps) {
     return (
         <div className="body">
-            <Confetti recycle={false} />
+            <Confetti recycle={false} width={props.width} height={props.height}/>
             <Header firstTitle={props.firstTitle} subtitle={props.subtitle}/>
             <Main text={props.text}/>
             <Footer />

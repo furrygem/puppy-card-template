@@ -20,6 +20,25 @@ function parseText(text: string): string[] {
 
 function App() {
   const [text, setText] = useState(['']);
+  const [screenSize, getDimension] = useState({
+    dynamicWidth: window.innerWidth,
+    dynamicHeight: window.innerHeight
+  });
+  const setDimension = () => {
+    getDimension({
+      dynamicWidth: window.innerWidth,
+      dynamicHeight: window.innerHeight
+    })
+  }
+  
+  useEffect(() => {
+    window.addEventListener('resize', setDimension);
+    
+    return(() => {
+        window.removeEventListener('resize', setDimension);
+    })
+  }, [screenSize])
+
   useEffect(() => {
     fetch('/letter.txt')
       .then(res => res.text())
@@ -27,7 +46,12 @@ function App() {
       .then(res => setText(res))
     }, [])
   return (
-    <Card firstTitle='Hello, Darling' subtitle='Happy Birthday!' text={text}/>
+    <Card firstTitle='Hello, Darling'
+          subtitle='Happy Birthday!'
+          text={text}
+          width={screenSize.dynamicWidth}
+          height={screenSize.dynamicHeight}
+    />
   );
 }
 
