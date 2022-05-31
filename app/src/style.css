@@ -113,17 +113,17 @@ main {
 }
 
 
-.footer__github-link {
+.footer__link {
     color: #fff;
     text-decoration: underline;
 }
 
 
-.footer__github-link:visited {
+.footer__link:visited {
     color: #fff;
 }
 
-.footer__github-link::after {
+.footer__link::after {
     content: "";
 }
 

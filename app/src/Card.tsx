@@ -48,7 +48,8 @@ function Footer() {
         <footer>
             <div className="footer__wrapper">
                 <p>&lt;3</p>
-                <a href="https://github.com/furrygem/puppy-card" className="footer__github-link">GitHub</a>
+                <a href="https://github.com/furrygem/puppy-card" className="footer__link">GitHub</a>
+                <a href="/letter.txt" className="footer__link">letter.txt</a>
             </div>
         </footer>
     )
