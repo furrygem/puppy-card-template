@@ -1,4 +1,3 @@
-import React, { useEffect, useState, SetStateAction } from 'react';
 import Confetti from 'react-confetti';
 
 
@@ -28,7 +27,6 @@ function Main(props: MainProps) {
     }
     return (
         <main>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati similique odio mollitia repudiandae repellendus? A recusandae ullam sint nam quos voluptas. Nobis cum dolorum animi earum modi impedit possimus repellendus.</p>
             {text}
         </main>
     )
@@ -48,7 +46,10 @@ function Header(props: HeaderProps) {
 function Footer() {
     return (
         <footer>
-            <p>&lt;3</p>
+            <div className="footer__wrapper">
+                <p>&lt;3</p>
+                <a href="https://github.com/furrygem/puppy-card" className="footer__github-link">GitHub</a>
+            </div>
         </footer>
     )
 }

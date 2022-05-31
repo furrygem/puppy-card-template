@@ -67,14 +67,27 @@ header {
 
 
 footer {
-    position: absolute;
+    position: sticky;
     bottom: 0;
     max-height: 6em;
+    min-height: 3em;
     width: 100%;
     background-color: #FEC8CD;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; */
     /* border-top: solid 2px #fff; */
 }
 
+
+.footer__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
 
 footer::before {
     position: relative;
@@ -98,6 +111,22 @@ main {
     margin-right: auto;
     padding: 1em;
 }
+
+
+.footer__github-link {
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+.footer__github-link:visited {
+    color: #fff;
+}
+
+.footer__github-link::after {
+    content: "";
+}
+
 
 @keyframes header {
     0% {
