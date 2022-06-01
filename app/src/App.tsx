@@ -56,7 +56,8 @@ function App() {
   useEffect(() => {
     fetch('/letter.txt')
       .then(res => {
-        if (res.status === 404 || res.headers.get('content-type') !== 'text/plain') {
+        console.log(res.headers.get('content-type'))
+        if (res.status !== 200 || !res.headers.get('content-type')?.includes('text/plain')) {
           return "No letter.txt was found on the server\nTake a look at README of the project"
         }
         return res.text();
