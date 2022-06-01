@@ -24,8 +24,8 @@ interface HeaderProps {
 
 function Main(props: MainProps) {
     let text = [];
-    for (let paragraph of props.text) {
-        text.push(<p>{paragraph}</p>);
+    for (const [index, paragraph] of props.text.entries()) {
+        text.push(<p key={index}>{paragraph}</p>);
     }
     return (
         <main style={{whiteSpace: "pre-wrap"}}>
@@ -50,7 +50,7 @@ function Footer() {
         <footer>
             <div className="footer__wrapper">
                 <p>&lt;3</p>
-                <a href="https://github.com/furrygem/puppy-card" className="footer__link">GitHub</a>
+                <a href="https://github.com/furrygem/puppy-card-template" className="footer__link">GitHub</a>
                 <a href="/letter.txt" className="footer__link">letter.txt</a>
             </div>
         </footer>
