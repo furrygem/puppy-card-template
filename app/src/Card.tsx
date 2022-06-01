@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import Confetti from 'react-confetti';
 
 
@@ -29,7 +28,7 @@ function Main(props: MainProps) {
         text.push(<p>{paragraph}</p>);
     }
     return (
-        <main>
+        <main style={{whiteSpace: "pre-wrap"}}>
             {text}
         </main>
     )

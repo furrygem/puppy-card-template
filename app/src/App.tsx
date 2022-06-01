@@ -7,13 +7,19 @@ import { useEffect, useState } from 'react';
 function parseText(text: string): string[] {
   let elements = text.split('\n');
   let result: string[] = [];
+  let paragraph: string = '';
   for (let el of elements) {
+    console.log(el)
     if (el.trim() === '') {
-     continue
+      result.push(paragraph);
+      paragraph = '';
+      continue
     }
-     result.push(el.trim());
+    paragraph += `${el}\n`;
+    console.log(paragraph);
   }
 
+  result.push(paragraph);
   return result;
 }
 
